@@ -30,6 +30,8 @@
 		F9A06A9025A469C10057873C /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = F9A06A8F25A469C10057873C /* FirebaseStorageSwift-Beta */; };
 		F9A06A9225A469C10057873C /* GoogleUtilities_UserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = F9A06A9125A469C10057873C /* GoogleUtilities_UserDefaults */; };
 		F9A06A9525A48CF40057873C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9A06A9425A48CF30057873C /* GoogleService-Info.plist */; };
+		F9A06A9925A48F4B0057873C /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A06A9825A48F4B0057873C /* CardRepository.swift */; };
+		F9A06A9E25A490A00057873C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A06A9D25A490A00057873C /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		F9A06A4925A45F260057873C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9A06A4B25A45F260057873C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9A06A9425A48CF30057873C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F9A06A9825A48F4B0057873C /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
+		F9A06A9D25A490A00057873C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		F9A06A3C25A45F1B0057873C /* FireCardsRep */ = {
 			isa = PBXGroup;
 			children = (
+				F9A06A9C25A4906F0057873C /* Models */,
+				F9A06A9725A48EC10057873C /* Repositories */,
 				F9A06A3D25A45F1B0057873C /* AppDelegate.swift */,
 				F9A06A3F25A45F1B0057873C /* SceneDelegate.swift */,
 				F9A06A4125A45F1B0057873C /* ContentView.swift */,
@@ -108,6 +114,22 @@
 				F9A06A4625A45F260057873C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9A06A9725A48EC10057873C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F9A06A9825A48F4B0057873C /* CardRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F9A06A9C25A4906F0057873C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9A06A9D25A490A00057873C /* Card.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A06A3E25A45F1B0057873C /* AppDelegate.swift in Sources */,
+				F9A06A9925A48F4B0057873C /* CardRepository.swift in Sources */,
+				F9A06A9E25A490A00057873C /* Card.swift in Sources */,
 				F9A06A4025A45F1B0057873C /* SceneDelegate.swift in Sources */,
 				F9A06A4225A45F1B0057873C /* ContentView.swift in Sources */,
 			);
