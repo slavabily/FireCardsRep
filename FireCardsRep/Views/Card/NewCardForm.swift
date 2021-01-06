@@ -10,6 +10,7 @@ import SwiftUI
 struct NewCardForm: View {
     @State var question: String = ""
     @State var answer: String = ""
+    @State var hint: String = ""
     @Environment(\.presentationMode) var presentationMode
     
     @ObservedObject var cardListViewModel: CardListViewModel
@@ -23,10 +24,12 @@ struct NewCardForm: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
         }
         VStack(alignment: .leading, spacing: 10) {
-          Text("Answer")
-            .foregroundColor(.gray)
-          TextField("Enter the answer", text: $answer)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
+            Text("Answer")
+                .foregroundColor(.gray)
+            TextField("Enter the answer", text: $answer)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            TextField("Enter the hint", text: $hint)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
         }
         Button(action: {
           addCard()
@@ -41,7 +44,7 @@ struct NewCardForm: View {
     
     private func addCard() {
         
-        let card = Card(question: question, answer: answer)
+        let card = Card(question: question, answer: answer, hint: hint)
         cardListViewModel.add(card)
         presentationMode.wrappedValue.dismiss()
     }

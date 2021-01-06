@@ -13,6 +13,7 @@ struct Card: Identifiable, Codable {
     @DocumentID var id: String?
     var question: String
     var answer: String
+    var hint: String
     var successful: Bool = true
     var userId: String?
     
@@ -20,6 +21,6 @@ struct Card: Identifiable, Codable {
 
 #if DEBUG
 let testData = (1...10).map { i in
-  Card(question: "Question #\(i)", answer: "Answer #\(i)")
+    Card(question: "Question #\(i)", answer: "Answer #\(i)", hint: "Hint #\(i)")
 }
 #endif

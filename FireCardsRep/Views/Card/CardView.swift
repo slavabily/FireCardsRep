@@ -66,69 +66,76 @@ struct CardView: View {
           .padding(20.0)
         Spacer()
         if !cardViewModel.card.successful {
-          Text("You answered this one incorrectly before")
-            .foregroundColor(.white)
-            .font(.system(size: 11))
-            .fontWeight(.bold)
-            .padding()
+            Text("You answered this one incorrectly before")
+                .foregroundColor(.white)
+                .font(.system(size: 11))
+                .fontWeight(.bold)
+                .padding()
+            Spacer()
+            Text("Hint: \(cardViewModel.card.hint)")
+                .foregroundColor(.white)
+                .font(.system(size: 14))
+                .fontWeight(.bold)
+                .padding()
         }
       }
     }
 
     var backView: some View {
-      VStack(alignment: .center) {
-        Spacer()
-        Text(cardViewModel.card.answer)
-          .foregroundColor(.white)
-          .font(.body)
-          .padding(20.0)
-          .multilineTextAlignment(.center)
-          .animation(.easeInOut)
-        Spacer()
-        HStack(spacing: 40) {
-              Button(action: markCardAsSuccesful) {
-                Image(systemName: "hand.thumbsup.fill")
-                  .padding()
-                  .background(Color.green)
-                  .font(.title)
-                  .foregroundColor(.white)
-                  .clipShape(Circle())
-              }
-              Button(action: markCardAsUnsuccesful) {
-                Image(systemName: "hand.thumbsdown.fill")
-                  .padding()
-                  .background(Color.blue)
-                  .font(.title)
-                  .foregroundColor(.white)
-                  .clipShape(Circle())
-              }
+        VStack(alignment: .center) {
+            Spacer()
+            Text(cardViewModel.card.answer)
+                .foregroundColor(.white)
+                .font(.body)
+                .fontWeight(.bold)
+                .padding(20.0)
+                .multilineTextAlignment(.center)
+                .animation(.easeInOut)
+            Spacer()
+            HStack(spacing: 40) {
+                Button(action: markCardAsSuccesful) {
+                    Image(systemName: "hand.thumbsup.fill")
+                        .padding()
+                        .background(Color.green)
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .clipShape(Circle())
+                }
+                Button(action: markCardAsUnsuccesful) {
+                    Image(systemName: "hand.thumbsdown.fill")
+                        .padding()
+                        .background(Color.blue)
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .clipShape(Circle())
+                }
+            }
+            .padding()
         }
-        .padding()
-      }
-      .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
+        .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
     }
     
     private func markCardAsUnsuccesful() {
-      var updatedCard = cardViewModel.card
-      updatedCard.successful = false
-      update(card: updatedCard)
+        var updatedCard = cardViewModel.card
+        updatedCard.successful = false
+        update(card: updatedCard)
     }
     
     private func markCardAsSuccesful() {
-      var updatedCard = cardViewModel.card
-      updatedCard.successful = true
-      update(card: updatedCard)
+        var updatedCard = cardViewModel.card
+        updatedCard.successful = true
+        update(card: updatedCard)
     }
     
     func update(card: Card) {
-      cardViewModel.update(card: card)
-      showContent.toggle()
+        cardViewModel.update(card: card)
+        showContent.toggle()
     }  
 }
 
 struct CardView_Previews: PreviewProvider {
-  static var previews: some View {
-    let card = testData[0]
-    return CardView(cardViewModel: CardViewModel(card: card))
-  }
+    static var previews: some View {
+        let card = testData[0]
+        return CardView(cardViewModel: CardViewModel(card: card))
+    }
 }
