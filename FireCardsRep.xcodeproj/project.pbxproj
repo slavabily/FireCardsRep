@@ -37,6 +37,7 @@
 		F9A06AAC25A4A4320057873C /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A06AAB25A4A4320057873C /* CardListView.swift */; };
 		F9A06AB025A4B0CD0057873C /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A06AAF25A4B0CD0057873C /* CardViewModel.swift */; };
 		F9A06AB325A4BD100057873C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A06AB225A4BD100057873C /* CardView.swift */; };
+		F9A06AB725A5AEBE0057873C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A06AB625A5AEBD0057873C /* AuthenticationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		F9A06AAB25A4A4320057873C /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		F9A06AAF25A4B0CD0057873C /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		F9A06AB225A4BD100057873C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F9A06AB625A5AEBD0057873C /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		F9A06A3C25A45F1B0057873C /* FireCardsRep */ = {
 			isa = PBXGroup;
 			children = (
+				F9A06AB525A5AE9E0057873C /* Services */,
 				F9A06AA525A4A15C0057873C /* Views */,
 				F9A06AA025A4A0500057873C /* ViewModels */,
 				F9A06A9C25A4906F0057873C /* Models */,
@@ -169,6 +172,14 @@
 				F9A06AB225A4BD100057873C /* CardView.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		F9A06AB525A5AE9E0057873C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F9A06AB625A5AEBD0057873C /* AuthenticationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				F9A06A9925A48F4B0057873C /* CardRepository.swift in Sources */,
 				F9A06AA725A4A1BB0057873C /* NewCardForm.swift in Sources */,
 				F9A06A9E25A490A00057873C /* Card.swift in Sources */,
+				F9A06AB725A5AEBE0057873C /* AuthenticationService.swift in Sources */,
 				F9A06AB325A4BD100057873C /* CardView.swift in Sources */,
 				F9A06A4025A45F1B0057873C /* SceneDelegate.swift in Sources */,
 				F9A06AA225A4A0720057873C /* CardListViewModel.swift in Sources */,
